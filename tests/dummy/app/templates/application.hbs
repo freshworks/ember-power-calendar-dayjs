@@ -1,0 +1,33 @@
+
+<h2 id="title">Power Calendar with dayjs</h2>
+
+<PowerCalendar
+  @center={{this.someDate}}
+  @selected={{this.selected}}
+  @onSelect={{action (mut this.selected) value="date"}}
+  @onCenterChange={{action (mut this.someDate) value="date"}}
+  as |cal|>
+    <cal.Nav/>
+    <cal.Days/>
+</PowerCalendar>
+
+<PowerCalendarRange
+  @center={{this.someDate}}
+  @selected={{this.selectedRange}}
+  @minRange="1w"
+  @onSelect={{action (mut this.selectedRange) value="dayjs"}}
+  @onCenterChange={{action (mut this.someDate) value="dayjs"}} as |calendar|
+>
+  <calendar.Nav />
+  <calendar.Days />
+</PowerCalendarRange>
+
+<PowerCalendarMultiple
+  @center={{this.someDate}}
+  @selected={{this.selectedMultiple}}
+  @onSelect={{action (mut this.selectedMultiple) value="dayjs"}}
+  @onCenterChange={{action (mut this.someDate) value="dayjs"}} as |calendar|
+>
+  <calendar.Nav />
+  <calendar.Days />
+</PowerCalendarMultiple>
