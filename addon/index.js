@@ -127,7 +127,7 @@ export function withLocale(locale, fn) {
 
 export function normalizeCalendarValue(value) {
   if (value) {
-    return { date: value.date, moment: value.date ? dayjs(value.date) : undefined }
+    return { date: value.date, dayjs: value.date ? dayjs(value.date) : undefined }
   }
   return { date: undefined, dayjs: undefined };
 }
